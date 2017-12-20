@@ -1,0 +1,64 @@
+body {
+    background-color: #000;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.random-box {
+    border-radius: 5px;
+    background-color: #fff;
+    width: 800px;
+    margin: 0 auto;
+    padding: 1%;
+}
+.img-holder {
+    width: 200px;
+    float: left;
+}
+
+.img-holder img {
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+}
+
+.quote-box {
+    float: right;
+    width: 600px;
+}
+
+.button-bar {
+    /*background-color: cadetblue;!*temp color*!*/
+    border-radius: 5px;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.btn {
+    border: 3px solid black;
+    border-radius: 5px;
+    color: #f2c300;
+    font-size: 1.3em;
+    padding: 5px 10px;
+    background-color: #0099f6;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.third {
+    background-color: #fff;
+}
+
+.fa-twitter-square {font-size: 3em;}
