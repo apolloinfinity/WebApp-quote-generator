@@ -1,5 +1,16 @@
 'use strict';
 
+/*
+I want to create this project just using vanilla javascript. FreeCodeCamp does use jQuery a lot for the projects but I feel that jquery
+is not necessary for this project and misses on some of the points of how javascript truly works. 
+
+1. Create a JSON object
+2. Parse that JSON and tested to see it workss correctly
+3. Create an object or a function that randomnizes the JSON file.
+4. Create an object that grabs the DOM elements and sends the random quote to the view. 
+5. I could always do this project with Angular but what's the fun in that?!
+*/
+
 //This is just an example on how I can create a randomnizer.
 
 // var arr = ['a', 'b', 'c', 'd', 'e'];
@@ -9,25 +20,11 @@ console.log(randomArr);
 */
 // var quote = document.getElementById("quote");
 
-var arr = ["Computers make excellent and efficient servants, but I have no wish to serve under them.",
-    "Insufficient facts always invite danger.",
-    "In critical moments, men sometimes see exactly what they wish to see.",
-    "Without followers, evil cannot spread.",
-    "When you eliminate the impossible, whatever remains, however improbable, must be the truth.",
-    "The needs of the many outweigh the needs of the few.",
-    "After a time, you may find that having is not so pleasing a thing after all as wanting.",
-    "When there is no emotion, there is no motive for violence.",
-    "Change is the essential process of all existence.",
-    "Logic is the beginning of wisdom, not the end of it.",
-    "I see no logic in wanting to worship a deity that demands you to live in a perpetual state of fear.",
-    "Physical reality is consistent with universal laws. Where the laws do not operate, there is no reality.",
-    "I have and always shall be your friend.",
-    "Your highly emotional is most illogical",
-    "Live long and prosper."
-];
 
 
 
+
+/*
 (function() {
     var quote = document.getElementById("quote");
 
@@ -40,11 +37,4 @@ var arr = ["Computers make excellent and efficient servants, but I have no wish 
     });
 
 }());
-
-
-/*
-The quote generator works but now it seems I may need to use a for loop so I can use the i variable to compare
-the randomArr to itself. This way if the generator is the same as the current quote, it can invoke the randomArr variable
-again.
-
 */

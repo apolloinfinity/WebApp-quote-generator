@@ -1,64 +1,75 @@
+/* 
+#df0000	(223,0,0) Red
+#f2c300	(242,195,0) Gold
+#0099f6	(0,153,246) Blue
+#00b844	(0,184,68) Gree
+#000000 Space
+
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
-    background-color: #000;
-    font-family: 'Saira Semi Condensed', sans-serif;
-}
-
-.clearfix:after {
-    display: block;
-    content: "";
-    clear: both;
-}
-
-.random-box {
-    border-radius: 5px;
-    background-color: #fff;
-    width: 800px;
-    margin: 0 auto;
-    padding: 1%;
-}
-.img-holder {
-    width: 200px;
-    float: left;
-}
-
-.img-holder img {
-    border-radius: 5px;
-    width: 200px;
-    height: auto;
-}
-
-.quote-box {
-    float: right;
-    width: 600px;
-}
-
-.button-bar {
-    /*background-color: cadetblue;!*temp color*!*/
-    border-radius: 5px;
-    height: 70px;
-    margin-top: 20px;
-}
-
-.btn {
-    border: 3px solid black;
-    border-radius: 5px;
-    color: #f2c300;
-    font-size: 1.3em;
-    padding: 5px 10px;
-    background-color: #0099f6;
+    font-family: "Raleway", sans-serif;
 }
 
 h1 {
+    font-size: 1.5em;
+}
+
+.btn {
+    display: inline;
+    padding: 15px 30px;
+    border: 3px solid #ccc;
+    text-decoration: none;
+}
+
+#grid {
+    /* background-color: yellow; */
+    border: 2px solid #000;
+    border-radius: 10px;
+    width: 800px;;
+    margin: 8% auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 300px 50px; 
+    grid-template-areas: 
+    "img quote"
+    "img social"
+    ;
+    grid-gap: 10px;
+    padding: 1%;
+
+}
+
+div.img-holder {
+    grid-area: img;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+}
+
+div.quote-box {
+    grid-area: quote;
+    /* background: green; */
+    padding: 2%;
+}
+
+div.button-bar {
+    grid-area: social;
+    /* background: blue; */
+    padding: 2%;
+}
+
+.img-holder img {
+    height: 200px;
+}
+
+.img-holder {
     text-align: center;
 }
-
-p {
-    font-size: 1.4em;
-    text-align: center;
-}
-
-.third {
-    background-color: #fff;
-}
-
-.fa-twitter-square {font-size: 3em;}
