@@ -30,7 +30,7 @@ function loadDoc() {
         }
     };
     xhttp.open("GET", "quotes.json", true);
-    xhttop
+    xhttp
 }
 
 // var el = document.getElementById("quote");
