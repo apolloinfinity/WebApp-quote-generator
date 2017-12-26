@@ -20,7 +20,22 @@ console.log(randomArr);
 */
 // var quote = document.getElementById("quote");
 
+function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200){
+            var parseQ = JSON.parse(this.responseText);
+            document.getElementById("quote");
 
+        }
+    };
+    xhttp.open("GET", "quotes.json", true);
+    xhttop
+}
+
+// var el = document.getElementById("quote");
+
+// var obj = JSON.parse()
 
 
 
