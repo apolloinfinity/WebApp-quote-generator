@@ -11,31 +11,37 @@ is not necessary for this project and misses on some of the points of how javasc
 5. I could always do this project with Angular but what's the fun in that?!
 */
 
-//This is just an example on how I can create a randomnizer.
 
-// var arr = ['a', 'b', 'c', 'd', 'e'];
-/*
-var randomArr = arr[Math.floor(arr.length * Math.random())];
-console.log(randomArr);
-*/
-// var quote = document.getElementById("quote");
+var btn = document.getElementById("btn");
+var quote = document.getElementById("quote");
+var author = document.getElementById("author");
 
-function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200){
-            var parseQ = JSON.parse(this.responseText);
-            document.getElementById("quote");
 
+btn.addEventListener("click", function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://apolloinfinity.github.io/src/data/quotes.json');
+
+    xhr.onload = function() {
+        if(xhr.status >= 200 && xhr.status <= 400){
+
+            //This variable holds the JSON items
+            var trekQuotes = JSON.parse(xhr.responseText);
+            var rand = Math.floor(Math.random() * trekQuotes.length);
+            quote.innerText = trekQuotes[rand].quoteText;
+            author.innerText = trekQuotes[rand].quoteAuthor;
+
+            // console.log(trekQoutes[0].quoteText); //Test only
+
+        } else {
+            console.log("connected to server but with an error");
         }
-    };
-    xhttp.open("GET", "quotes.json", true);
-    xhttp
-}
 
-// var el = document.getElementById("quote");
 
-// var obj = JSON.parse()
+    }
+
+    xhr.send();
+    // quote.innerText = randAuth();
+});
 
 
 

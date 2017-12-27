@@ -26,7 +26,7 @@ h1 {
 .btn {
     display: inline;
     padding: 15px 30px;
-    border: 3   px solid #ccc;
+    border: 3px solid #ccc;
     text-decoration: none;
 }
 
@@ -58,7 +58,33 @@ div.quote-box {
     grid-area: quote;
     /* background: green; */
     padding: 2%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90% 10%;
+    grid-template-areas:
+    "q"
+    "b"
+    ;
 }
+
+.quote-box div:first-child {
+    grid-area: q;
+    /* background: pink; */
+}
+
+.quote.box div:last-child {
+    grid-area: b;
+    /* background: aquamarine; */
+}
+
+#author {
+    text-align: right;
+}
+
+#quote {
+    text-align: center;
+}
+
 
 div.button-bar {
     grid-area: social;
