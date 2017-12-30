@@ -14,8 +14,9 @@ is not necessary for this project and misses on some of the points of how javasc
 var btn = document.getElementById("btn");
 var quote = document.getElementById("quote");
 var author = document.getElementById("author");
+var tweet = document.getElementById("tweet");
 
-window.onload = ajax;
+window.onload = ajax();
 btn.addEventListener("click", ajax);
 
 
@@ -31,7 +32,7 @@ function ajax(){
             var trekQuotes = JSON.parse(xhr.responseText);
             var rand = Math.floor(Math.random() * trekQuotes.length);
             quote.innerText = trekQuotes[rand].quoteText;
-            author.innerText = trekQuotes[rand].quoteAuthor;
+            author.innerText = "- " + trekQuotes[rand].quoteAuthor;
 
             // console.log(trekQoutes[0].quoteText); //Test only
 
@@ -44,6 +45,10 @@ function ajax(){
     xhr.send();
 }
 
+tweet.addEventListener("click", function(){
+    var url = "https://twitter.com/intent/tweet";
+    
+});
 
 // btn.addEventListener("click", function() {
 //     var xhr = new XMLHttpRequest();
