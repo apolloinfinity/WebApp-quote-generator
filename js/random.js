@@ -49,52 +49,5 @@ tweet.addEventListener("click", function(e){
     e.preventDefault();
     
     window.open('https://twitter.com/intent/tweet?hashtags=quotes,fcc&related=freecodecamp&text='+ encodeURIComponent('"' + quote.innerText + '" ' + author.innerText), 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
-    // window.preventDefault();
 
 });
-
-// btn.addEventListener("click", function() {
-//     var xhr = new XMLHttpRequest();
-//     xhr.open('GET', 'https://apolloinfinity.github.io/src/data/quotes.json');
-
-//     xhr.onload = function() {
-//         if(xhr.status >= 200 && xhr.status <= 400){
-
-//             //This variable holds the JSON items
-//             var trekQuotes = JSON.parse(xhr.responseText);
-//             var rand = Math.floor(Math.random() * trekQuotes.length);
-//             quote.innerText = trekQuotes[rand].quoteText;
-//             author.innerText = trekQuotes[rand].quoteAuthor;
-
-//             // console.log(trekQoutes[0].quoteText); //Test only
-
-//         } else {
-//             console.log("connected to server but with an error");
-//         }
-
-
-//     }
-
-//     xhr.send();
-    
-//     // quote.innerText = randAuth();
-// });
-
-
-
-
-
-/*
-(function() {
-    var quote = document.getElementById("quote");
-
-    function randomArr(){
-      return arr[Math.floor(arr.length * Math.random())];
-    }
-
-    var btn = document.getElementById("random").addEventListener("click", function(){
-        quote.innerText = randomArr();
-    });
-
-}());
-*/
