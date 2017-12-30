@@ -20,8 +20,6 @@ window.onload = ajax();
 btn.addEventListener("click", ajax);
 
 
-
-
 function ajax(){
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://apolloinfinity.github.io/src/data/quotes.json');
@@ -45,9 +43,14 @@ function ajax(){
     xhr.send();
 }
 
-tweet.addEventListener("click", function(){
-    var url = "https://twitter.com/intent/tweet";
+
+
+tweet.addEventListener("click", function(e){
+    e.preventDefault();
     
+    window.open('https://twitter.com/intent/tweet?hashtags=quotes,fcc&related=freecodecamp&text='+ encodeURIComponent('"' + quote.innerText + '" ' + author.innerText), 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
+    // window.preventDefault();
+
 });
 
 // btn.addEventListener("click", function() {
