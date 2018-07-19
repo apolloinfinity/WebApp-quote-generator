@@ -12,3 +12,8 @@ I used VanillaJS with this project instead of using JQuery or any other framewor
 4. I also learned how to use anonymous function expressions and event listeners and used them on certain elements.
 5. I found a small neat library to create the star field from [VincentvGarreau](https://github.com/VincentGarreau/particles.js/)
 6. Most importantly, it was fun building this project and it greatly expanded my understanding of JavaScript and its power. 
+
+
+### Updates for this repo
+[] Make Mobile friendly
+[] Possibly update from using AJAX Api to using Axios library to better understand it.
