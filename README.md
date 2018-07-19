@@ -15,5 +15,5 @@ I used VanillaJS with this project instead of using JQuery or any other framewor
 
 
 ### Updates for this repo
-[] Make Mobile friendly
-[] Possibly update from using AJAX Api to using Axios library to better understand it.
+*[] Make Mobile friendly
+*[] Possibly update from using AJAX Api to using Axios library to better understand it.
