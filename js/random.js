@@ -20,11 +20,11 @@ window.onload = ajax();
 btn.addEventListener("click", ajax);
 
 
-function ajax(){
+function ajax() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://apolloinfinity.github.io/src/data/quotes.json');
-    xhr.onload = function() {
-        if(xhr.status >= 200 && xhr.status <= 400){
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status <= 400) {
 
             //This variable holds the JSON items
             var trekQuotes = JSON.parse(xhr.responseText);
@@ -45,9 +45,9 @@ function ajax(){
 
 
 
-tweet.addEventListener("click", function(e){
+tweet.addEventListener("click", function (e) {
     e.preventDefault();
-    
-    window.open('https://twitter.com/intent/tweet?hashtags=quotes,fcc&related=freecodecamp&text='+ encodeURIComponent('"' + quote.innerText + '" ' + author.innerText), 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
+
+    window.open('https://twitter.com/intent/tweet?hashtags=quotes,fcc&related=freecodecamp&text=' + encodeURIComponent('"' + quote.innerText + '" ' + author.innerText), 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
 
 });
