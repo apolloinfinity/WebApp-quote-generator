@@ -31,9 +31,9 @@ canvas {
 }
 
 .inner-container {
-    width: 70%;
+    width: 50%;
     height: 500px;
-    /* background: rgb(235, 179, 116); */
+    background: rgb(235, 179, 116);
 }
 
 .img-container {
@@ -42,11 +42,11 @@ canvas {
 }
 
 .quote-container {
-    /* background: orange */
+    background: orange
 }
 
 .button-container {
-    /* background: salmon; */
+    background: salmon;
     justify-content: space-around;
     align-items: center;
 }
